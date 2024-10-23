@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr" id="toutCV">
+<head>
+	<title>CV de William Duquennoy</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Pour le responsive -->
+	<meta name="description" content="CV de William Duquennoy réalisé dans le cadre d'un projet scolaire, ce CV a été créé avec les langages HTML, CSS et JavaScript. 
+	Il contient au moins 2 animations en js, comme demandé dans les consignes imposées par M. Miller.">
+	<meta name="keywords" content="CV, projet, heh, william duquennoy, javascript, IRT2, animations" />
+	<meta name="author" content="William Duquennoy - IRT2" />
+	<meta name="copyright" content="William Duquennoy - IRT2" />
+	<meta name="robots" content="index" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="NFT/will.jpg"> <!-- Pour l'icone de l'onglet -->
+	
+</head>
+
+	<body class="darkmode">
+		<div id="cursor"></div>
+
+		<!--Création du header-->
+		<header lang="fr">
+			<figure class="entete">
+				<div class="boutonsupp">
+					<a href="https://www.linkedin.com/in/william-duquennoy-7b34a8249/" target="_blank"><img class="liensutiles" src="icons/LinkedIn-Icon-Logo.svg" alt="lien_LinkedIn"></a>
+					<a href="https://github.com/William-DQN" target="_blank"><img class="liensutiles" src="icons/GitHub-Logo.svg" alt="lien_github"></a>
+					<button id="btn-fr"></button>
+					<button id="btn-en"></button>
+					<button id="btn-nl"></button>
+					<button onclick="darkFunction()" id="mode-button"></button>
+				</div>
+			</figure>
+		<!--Chaque section aura son propre type de contenu-->
+
+		<!--Corps du site en français-->
+			<section class="ligne">
+				<article id="presentation" lang="fr">
+					<div id="left">
+						<figure id="image-container">
+							<img src="photos_CV/photo3.jpg" alt="Photo_du_proriétaire_du_cv">
+							<img src="photos_CV/image.png" alt="Photo_du_proriétaire_du_cv">
+						</figure>
+					  </div>
+					  <div id="right">
+							<h1><span  id="scrol-text-container">William DUQUENNOY </span></h1>
+							<h2><span data-traduction="state">Étudiant en informatique </span></h2>
+							<p>26/09/1998</p>
+							<p><span data-traduction="street">Chaussée de Bruxelles, 411</span></p>
+							<p><span data-traduction="city">7850 Enghien</span></p>
+							<p>0483/37.06.19</p>
+							<p>william.duquennoy@outlook.be</p>
+					  </div>
+				</article>
+		  </section>
+		</header>
+		<!--Corps du texte-->
+		<div id="division">
+			<section id = "colonnus">
+				<article lang="fr">
+					<h2 id="parcpro" > <i class="fa-solid fa-toolbox"></i> <span data-traduction="parcours_pro">   Parcours professionnel</span></h2>
+					<p><span data-traduction="job1">* 2022 - 2023 : Chef d’équipe du musée de l’informatique - HEH à Mons : recherches, réunions et présentation du matériel.</span></p>
+					<p><span data-traduction="job2">* Été 2022 : Job étudiant chez SDIL à Saintes : préparation de commande, picking.</span></p>
+					<p><span data-traduction="job3">* Septembre 2019 - Mai 2021 : Agent de gardiennage - DESM SECURITY sur Bruxelles : missions de surveillances, réceptions de livraison et missions de magasinier.</span></p>
+
+				</article>
+				<article lang="fr">
+					<h2 id="parcsco" > <i class="fa-solid fa-graduation-cap"></i><span data-traduction="parcours_scolaire">   Formations</span></h2>
+					<p><span data-traduction="deuxieme_annee_bachelier">* 2022 - 2023 : 2e année bachelier Informatique - systèmes et réseaux - HEH à Mons.</span></p>
+					<p><span data-traduction="premiere_annee_bachelier">* 2019 : Certificat de réussite de 7e année - Académie Provinciale des Métiers à Mons.</span></p>
+					<p><span data-traduction="CESS">* 2018 : CESS - Athénée Royal Jules Bordet à Braine-le-Comte.</span></p>
+				</article>
+				<article lang="fr">
+					<h2 id="prog" ><i class="fa-solid fa-laptop-file"></i><span data-traduction="progra">   Programmation </span></h2>
+					<p>* Python</p>
+					<p>* C#</p>
+					<p>* HTML/CSS</p>
+					<p>* SQL</p>
+					<p>* PHP</p>
+					<p>* JavaScript</p>
+				</article>
+
+			</section>
+			<section id = "colonnus2">
+				<article lang="fr">
+					<h2 id="langages"> <i class="fa-solid fa-comment-dots"></i><span data-traduction="langues">   Langues</span></h2>
+					<p><span data-traduction="l1">* Français - Langue maternelle.</span></p>
+					<p><span data-traduction="l2">* Anglais - B1.</span></p>
+				</article>
+				<article lang="fr">
+					<h2 id="comp"> <i class="fa-solid fa-gears"></i><span data-traduction="hardskills">   Hardskills</span></h2>
+					<p><span data-traduction="hs1">* PC Building.</span></p>
+					<p><span data-traduction="hs2">* Programmation.</span></p>
+					<p><span data-traduction="hs3">* Word, Powerpoint et Excel.</span></p>
+					<p><span data-traduction="hs4">* IT infrastructure (Linux, Widows Server, Network).</span></p>
+					<p><span data-traduction="hs5">* Méthode SCRUM.</span></p>
+
+				</article>
+				<article lang="fr">
+					<h2 id="softski"><i class="fa-solid fa-brain"></i><span data-traduction="softskills">   Softskills</span></h2>
+					<p><span data-traduction="ecoute">* À l’écoute.</span></p>
+					<p><span data-traduction="integre">* Intègre.</span></p>
+					<p><span data-traduction="flexible">* Flexible.</span></p>
+					<p><span data-traduction="ponctuel">* Ponctuel.</span></p>
+					<p><span data-traduction="equipe">* Esprit d’équipe.</span></p>
+				  </article>
+				  <article lang="fr">
+						<h2 id="hobbies"><i class="fa-solid fa-dumbbell"></i><span data-traduction="hobbies">   Hobbies</span></h2>
+						<p><span data-traduction="h3">* Escrime.</span></p>
+						<p><span data-traduction="h2">* Musculation.</span></p>
+						<p><span data-traduction="h1">* Course à pied.</span></p>
+
+						<p><span data-traduction="h4">* Programmation.</span></p>
+						<p><span data-traduction="h5">* Lecture.</span></p>
+				  </article>
+			</section>
+		</div>
+		<!--Bouton d'impression-->
+		<div class="bouton-ptr" id="boutprint">
+			<button lang="fr" id="printing"> <i class="fa-solid fa-print"></i><span data-traduction="print">   Imprimer </span></button>
+		</div>
+		<!--Corps du site en français-->
+
+	<script src="https://kit.fontawesome.com/8d82d9240a.js" crossorigin="anonymous"></script> <!-- Pour les icones dans le nav -->
+	<script src="app.js"></script>
+	</body>
+</html>

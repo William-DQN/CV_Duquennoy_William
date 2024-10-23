@@ -1,0 +1,742 @@
+/*-------------------------------------------------Version Mobile--------------------------------------------------*/
+:root {
+	/*Paramètres par défaut*/
+	margin: auto;
+	padding: 0;
+	font-family: Roboto, Arial, sans-serif;
+	
+	/*Couleurs à utiliser */
+	--couleur-principale: #ece9e9;
+	--couleur-secondaire: #82c7a485;
+
+	--couleur-tertiaire: #82d4bb;
+	--couleur-autres: #3fe626;
+	--couleur-contour: #68757a;
+	--couleur-titre: #20191d;
+	--couleur-titre2: #040685c5;
+	
+	/*Tailles des éléments*/
+	--taille-titre: 1.5rem;
+	--taille-soustitre: 1rem;
+	--taille-minititre: 0.9rem;
+	--taille-texte: 0.8rem;
+	--taille-bouton: 0.6rem;
+	
+	/*Disposition*/
+	--firstplan: 10;
+	--secondplan: 100;
+	--thirdplan: 1000;
+}
+/*base de l'html*/
+* {
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+}
+
+html{
+	scroll-behavior:smooth;
+	cursor:none;
+	
+}
+
+body{
+	background-color:var(--couleur-principale);
+}
+
+p{
+	font-size: var(--taille-texte);
+	line-height: 2;
+}
+
+#scrol-text-container {
+	line-height: 1.5;
+	white-space: nowrap;
+	overflow: hidden;
+}
+  
+
+
+
+/*Transition pour les images*/
+
+article figure img {
+	border: solid 5px var(--couleur-contour);
+	border-radius: 50%;
+}
+
+#image-container {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 1em auto;
+	transition: all .2s;
+	cursor: pointer;
+}
+
+
+#image-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 1s ease-in-out;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+#image-container:hover{
+	transform: scale(1.1);
+}
+
+#image-container img:nth-child(2) {
+	opacity: 0;
+}
+/*Transition pour les images*/
+
+/*--------------------------------Composition du header------------------------------------*/
+
+#right{
+	text-align: center;
+}
+
+h1 {
+	font-size: var(--taille-titre);
+	color: var(--couleur-titre);
+	margin-top: 0;
+}
+
+h1:hover{
+	color: var(--couleur-titre2);
+}
+
+
+
+.ligne{
+	border-bottom-style: outset;
+	background-color: rgba(156, 240, 205, 0.5);
+}
+
+section {
+	padding: 0.5rem 1rem 0;
+	text-align:center;
+}
+
+article{
+	display:block;
+	font-size:var(--taille-texte);
+	margin-bottom:3rem;
+	margin-left: 15px;
+	padding: 0;
+}
+
+h2{
+	text-transform: uppercase ;
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: var(--taille-soustitre);
+}
+h3{
+	text-transform: uppercase ;
+	font-size: var(--taille-minititre);
+}
+
+/*-------------------------------éléments spéciaux-----------------------------------------------------*/
+/*Paramètres pour le curseur*/
+#cursor {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: solid 10px #d72727;
+	background-color: transparent;
+	pointer-events: none;
+  }
+/*Paramètres pour le curseur*/
+
+
+
+/*Liens cliquables*/
+.entete{
+	display: block;
+    background-color: var(--couleur-tertiaire);
+    border-bottom-style: outset;
+}
+
+.liensutiles{
+	max-height: 40px;
+    max-width: 40px;
+	justify-content: flex-start;
+	transition: all .2s;
+}
+
+.liensutiles:hover{
+	transform: scale(1.5);
+
+}
+/*Liens cliquables*/
+
+
+/*Boutons pour changer les langues*/
+.boutonsupp{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/*Liens cliquables*/
+
+#btn-fr{
+	height: 30px;
+	width: 30px;
+    border-radius: 50%;
+    border: 5px solid var(--couleur-contour);
+    background-image: url(drapeaux/Flag_of_France.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0px 10px;
+	transition: all .2s;
+	cursor: pointer;
+}
+#btn-fr:hover{
+	transform: scale(1.5);
+}
+#btn-en{
+	height: 30px;
+	width: 30px;
+    border-radius:50%;
+	border: 5px solid var(--couleur-contour);
+	background-image: url("drapeaux/Flag_of_the_United_Kingdom.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0px 10px;
+	transition: all .2s;
+	cursor: pointer;
+}
+#btn-en:hover{
+	transform: scale(1.5);
+}
+#btn-nl{
+	height: 30px;
+	width: 30px;
+    border-radius:50%;
+	border: 5px solid var(--couleur-contour);
+	background-image: url("drapeaux/Flag_of_the_Netherlands.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0px 10px;
+	transition: all .2s;
+	cursor: pointer;
+}
+#btn-nl:hover{
+	transform: scale(1.5);
+}
+/*Boutons pour changer les langues*/
+
+/*Mode sombre*/
+  #mode-button{
+	height: 30px;
+	width: 30px;
+    border-radius:50%;
+	border: 5px solid var(--couleur-contour);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 0px 10px;
+	transition: all .2s;
+	cursor: pointer;
+  }
+  #mode-button:hover{
+	transform: scale(1.5);
+  }
+  #mode-button.sun {
+	background-image: url("icons/sun-svgrepo-com.svg");
+	height: 30px;
+	width: 30px;
+    border-radius:50%;
+	border: 5px solid var(--couleur-contour);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  }
+  
+  #mode-button.moon {
+	background-image: url("icons/moon-svgrepo-com.svg");
+	height: 30px;
+	width: 30px;
+    border-radius:50%;
+	border: 5px solid var(--couleur-contour);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  }
+
+.darkmode {
+	background-color: rgb(41, 41, 41);
+	color: white;
+  }
+
+/*Mode sombre*/
+
+/*printing*/
+.bouton-ptr{
+    display: flex;
+    justify-content: space-evenly;
+	margin: 10px 0;
+}
+
+#printing{
+    display: flex;
+    width: 75px;
+    height: 35px;
+    border-radius: 10%;
+    background-color: var(--couleur-secondaire);
+    border: solid 5px var(--couleur-contour);
+    font-size: var(--taille-bouton);
+    justify-content: center;
+    align-items: center;
+    transition: ease-out 0.3s;
+    outline: none;
+	cursor: pointer;
+}
+ #printing:hover{
+	box-shadow: inset 200px 0 0 0 var(--couleur-autres);
+	cursor:pointer;
+	color:#000000;
+ }
+ #printing:active::after{
+ 	opacity: 1;
+  	transition: 0s
+ }
+
+/*-------------------------------------------------Version Alternative--------------------------------------------------*/
+@media screen and (min-width: 480px){
+	:root{
+		/*Tailles des éléments*/
+		--taille-titre: 1.6rem;
+		--taille-soustitre: 1.2rem;
+		--taille-minititre: 1.3rem;
+		--taille-texte: 0.82rem;
+		--taille-bouton: 0.8rem;
+	}
+
+	article{
+		margin-left: 2rem;
+	}
+
+	h1{
+		font-size:var(--taille-titre) ;
+	}
+
+	h2{
+		font-size:var(--taille-soustitre) ;
+	}
+	h3{
+		font-size:var(--taille-minititre) ;
+	}
+	p{
+		font-size: var(--taille-texte);
+	}
+	/*--------------------------------Composition du header------------------------------------*/
+	#presentation{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
+		border-radius: 30px;
+		padding: 30px 15px;
+		background-color: rgba(130, 172, 159, 0.5);
+	}
+	.ligne{
+		border-bottom-style: outset;
+		background-color: rgba(156, 240, 205, 0.2);
+	}
+
+	.liensutiles{
+		max-height: 75px;
+   		max-width: 75px;
+	}
+
+	#btn-fr{
+		height: 35px;
+		width: 35px;
+	}
+
+	#btn-en{
+		height: 35px;
+		width: 35px;
+	}
+
+	#btn-nl{
+		height: 35px;
+		width: 35px;
+	}
+
+	#mode-button{
+		height: 35px;
+		width: 35px;
+	}
+	#mode-button.sun {
+		height: 35px;
+		width: 35px;
+	}
+
+	#mode-button.moon {
+		height: 35px;
+		width: 35px;
+	}
+
+	#left{
+
+		float: left;
+		margin-right: 20px;
+	}
+
+	#right {
+		overflow: hidden;
+		margin-left: 5px;
+		text-align: left;
+	}
+
+	#image-container {
+		position: relative;
+		width: 180px;
+		height: 180px;
+		margin: 0 auto;
+		transition: all .2s;
+		cursor: pointer;
+	}
+
+	#division{
+		margin: 3rem 4rem;
+	}
+	#printing{
+		display: flex;
+		width: 105px;
+		height: 50px;
+		border-radius: 10%;
+		background-color: var(--couleur-secondaire);
+		border: solid 5px var(--couleur-contour);
+		font-size: var(--taille-bouton);
+		justify-content: center;
+		align-items: center;
+		transition: ease-out 0.3s;
+		outline: none;
+	}
+
+
+}
+
+/*-------------------------------------------------Version Alternative2--------------------------------------------------*/
+@media screen and (min-width: 650px){
+	:root{
+		/*Tailles des éléments*/
+		--taille-titre:1.8rem;
+		--taille-soustitre:1.5rem;
+		--taille-minitire:1.2rem;
+		--taille-texte:1rem;
+		--taille-bouton:1rem;
+	}
+	#division{
+		display: flex;
+		margin: 4rem 3rem;
+		}
+
+	#colonnus{
+		flex-basis: 50%;
+    	margin-left: 4rem;
+	}
+	#colonnus2{
+		flex-basis: 50%;
+    	margin-left: 4rem;
+	}
+}
+
+
+/*-------------------------------------------------Version tablette--------------------------------------------------*/
+@media screen and (min-width: 796px){
+	:root{
+		/*Tailles des éléments*/
+		--taille-titre:1.8rem;
+		--taille-soustitre:1.5rem;
+		--taille-minitire:1.2rem;
+		--taille-texte:1rem;
+		--taille-bouton:1rem;
+	}
+
+	section {
+		padding: 0.5rem 1rem 0;
+		text-align:left;
+	}
+
+	article{
+		margin-left: 2rem;
+	}
+
+	h1{
+		font-size:var(--taille-titre) ;
+	}
+
+	h2{
+		font-size:var(--taille-soustitre) ;
+	}
+	h3{
+		font-size:var(--taille-minititre) ;
+	}
+	p{
+		font-size: var(--taille-texte);
+	}
+
+
+
+
+	
+	/*--------------------------------Composition du header------------------------------------*/
+	#presentation{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2rem;
+	}
+	.ligne{
+		border-bottom-style: outset;
+	}
+
+	.liensutiles{
+		max-height: 80px;
+   		max-width: 80px;
+	}
+
+	#btn-fr{
+		height: 40px;
+		width: 40px;
+	}
+
+	#btn-en{
+		height: 40px;
+		width: 40px;
+	}
+
+	#btn-nl{
+		height: 40px;
+		width: 40px;
+	}
+
+	#mode-button{
+		height: 40px;
+		width: 40px;
+	}
+
+	#mode-button.sun {
+		height: 40px;
+		width: 40px;
+	}
+
+	#mode-button.moon {
+		height: 40px;
+		width: 40px;
+	}
+
+	#left{
+
+		float: left;
+		margin-right: 20px;
+	}
+
+	#right {
+		overflow: hidden;
+		margin-left: 20px;
+	}
+
+	#image-container {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		transition: all .2s;
+		cursor: pointer;
+	}
+
+	#division{
+		display: flex;
+		margin: 5rem 4rem;
+		}
+
+	#colonnus{
+		flex-basis: 50%;
+    	margin-left: 4rem;
+	}
+	#colonnus2{
+		flex-basis: 50%;
+    	margin-left: 4rem;
+	}
+
+	#printing{
+		display: flex;
+		width: 125px;
+		height: 50px;
+		border-radius: 10%;
+		background-color: var(--couleur-secondaire);
+		border: solid 5px var(--couleur-contour);
+		font-size: var(--taille-bouton);
+		justify-content: center;
+		align-items: center;
+		transition: ease-out 0.3s;
+		outline: none;
+	}
+
+
+}
+
+/*-------------------------------------------------Version Desktop--------------------------------------------------*/
+
+@media screen and (min-width: 1280px){
+	:root{
+		/*Tailles des éléments*/
+		--taille-titre:3rem;
+		--taille-soustitre:1.7rem;
+		--taille-minitire:1.4rem;
+		--taille-texte:1.2rem;
+		--taille-bouton:1.2rem;
+		
+	}
+	section {
+		padding: 0.5rem 1rem 0;
+		text-align:left;
+	}
+
+	article{
+		margin: 0rem 3rem 3rem;
+		}
+
+	h1{
+		font-size:var(--taille-titre) ;
+	}
+
+	h2{
+		font-size:var(--taille-soustitre) ;
+	}
+	h3{
+		font-size:var(--taille-minititre) ;
+	}
+	p{
+		font-size: var(--taille-texte);
+	}
+
+
+	/*--------------------------------Composition du header------------------------------------*/
+	#presentation{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1.5rem 4rem;
+		padding: 30px 0;
+		background-color: rgba(130, 172, 159, 0.5);
+	}
+	.ligne{
+		border-bottom-style: outset;
+
+	}
+
+	.liensutiles{
+		max-height: 90px;
+   		max-width: 90px;
+	}
+
+	#btn-fr{
+		height: 50px;
+		width: 50px;
+	}
+
+	#btn-en{
+		height: 50px;
+		width: 50px;
+	}
+
+	#btn-nl{
+		height: 50px;
+		width: 50px;
+	}
+
+	#mode-button{
+		height: 50px;
+		width: 50px;
+	}
+
+	#mode-button.sun {
+		height: 50px;
+		width: 50px;
+	}
+
+	#mode-button.moon {
+		height: 50px;
+		width: 50px;
+	}
+
+	#left{
+
+		float: left;
+		margin-right: 40px;
+	}
+
+	#right {
+		overflow: hidden;
+		margin-left: 40px;
+	}
+
+	#image-container {
+		position: relative;
+		width: 250px;
+		height: 250px;
+		margin: 0 auto;
+		transition: all .2s;
+		cursor: pointer;
+	}
+
+	#division{
+		display :flex;
+		margin: 5rem 4rem;
+		
+	}
+	#colonnus{
+		flex-basis: 50%;
+    	margin-left: 7rem;
+	}
+	#colonnus2{
+		flex-basis: 50%;
+    	margin-left: 7rem;
+	}
+
+	#printing{
+		display: flex;
+		width: 135px;
+		height: 75px;
+		border-radius: 10%;
+		background-color: var(--couleur-secondaire);
+		border: solid 5px var(--couleur-contour);
+		font-size: var(--taille-bouton);
+		justify-content: center;
+		align-items: center;
+		transition: ease-out 0.3s;
+		outline: none;
+	}
+
+	#download{
+		display: flex;
+		width: 135px;
+		height: 75px;
+		border-radius: 10%;
+		background-color: var(--couleur-secondaire);
+		border: solid 5px var(--couleur-contour);
+		font-size: var(--taille-bouton);
+		justify-content: center;
+		align-items: center;
+		transition: ease-out 0.3s;
+		outline: none;
+	}
+
+}
